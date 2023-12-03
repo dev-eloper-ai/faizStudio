@@ -5,8 +5,8 @@ import { Home, ProjectDetails } from './pages';
 
 function App() {
   return (
-    // <Home />
-    <ProjectDetails />
+    <Home />
+    // <ProjectDetails />
   );
 }
 
