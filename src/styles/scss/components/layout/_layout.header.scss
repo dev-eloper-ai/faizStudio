@@ -1,0 +1,53 @@
+.header {
+    position: fixed;
+    max-width: 870px;
+    width: 100%;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    padding: 35px 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    background-color: rgba(color(50), 0.08);
+
+    .navbar {
+        background-color: transparent;
+        padding: 0;
+
+        .menuIcon {
+            display: block;
+            color: color(50);
+            font-size: 25px;
+        }
+
+        &-nav {
+            margin: 0 35px;
+        }
+
+        .nav {
+            &-link {
+                color: rgba(color(50), 0.60);
+                padding: 0 35px 0 0;
+                font-size: 24px;
+                font-family: font(lt);
+                position: relative;
+                &.active, &:hover{
+                    color: color(50);
+                }
+
+                &:last-child {
+                    &:after {
+
+                        position: absolute;
+                        content: '|';
+                        color: rgba(color(50),0.20);
+                        right: 0;
+                    }
+
+
+                }
+            }
+        }
+    }
+}

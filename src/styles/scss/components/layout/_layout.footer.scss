@@ -1,0 +1,74 @@
+.footer{
+    background: color(900);
+    padding: 100px 0 200px 0;
+    overflow: hidden;
+    &_inner{
+        max-width: 1230px;
+        margin: 0 auto;
+        text-align: center;
+        h4{
+            font-size: 90px;
+            color: #DFE0E3;
+            font-family: font(md);
+            + h4{
+                margin-bottom: 25px;
+            }
+            img{
+                margin: 0 20px;
+            }
+        }
+        .btn-light{
+            margin-top: 25px;
+            width: 280px;
+            height: 80px;
+            border-radius: 60px;
+            display: inline-block;
+            font-size: 20px;
+            font-family: font(lt);
+            @include flexcenter(both);
+            .icon{
+                margin-left: 10px;
+            }
+        }
+    }
+    &_links{
+        margin-top: 90px;
+        ul{
+            li{
+                padding: 6px 60px;
+                font-size: 32px;
+                position: relative;
+                &:first-child{
+                    &::before{
+                        position: absolute;
+                        width: 2px;
+                        height: 100%;
+                        background-color:rgba(#DFE0E3, 0.30);
+                        left: 0;
+                        top: 0;
+                        content: '';
+                    }
+                }
+                &::after{
+                    position: absolute;
+                    width: 2px;
+                    height: 100%;
+                    background-color:rgba(#DFE0E3, 0.30);
+                    right: 0;
+                    top: 0;
+                    content: '';
+                }
+                a{
+                    display: block;
+                    color: rgba(#DFE0E3, 0.30);
+                    @include transition(all 0.3s ease);
+                    &:hover{
+                        color: #FF41C6;
+                        transform: rotate(-5deg);
+                        @include transition(all 0.3s ease);
+                    }
+                }
+            }
+        }
+    }
+}

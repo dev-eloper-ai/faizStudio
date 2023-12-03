@@ -1,0 +1,39 @@
+.aboutUs{
+    &_text{
+        text-align: center;
+        padding: 0 35px;
+        h2{
+            font-size: 90px;
+            line-height: 1.2;
+        }
+    }
+}
+
+.workedExp{
+    padding-bottom: 140px;
+    background-image: url('#{$imageurl}/square-bg.svg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: left -472px bottom 0 ;
+    &_expList{
+        ul{
+            li{
+                border-bottom: 1px solid rgba(#868687,0.30);
+                padding: 30px 0;
+            }
+        }
+        &_info{
+            p{
+                font-size: 28px;
+                font-family: font(lt);
+                line-height: 1.3;
+                margin-left: 30px;
+            }
+        }
+        .designation, .duration{
+            font-size: 20px;
+            font-family: font(lt);
+            color: #868687;
+        }
+    }
+}

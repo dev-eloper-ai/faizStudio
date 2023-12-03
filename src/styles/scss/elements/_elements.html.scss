@@ -1,0 +1,25 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+body {
+  font-size: 16px;
+  line-height: 22px;
+  font-family: font(rg);
+  position: relative;
+  background-color: color(900);
+  color: color(50);
+  // overflow: hidden;
+}
+a,
+.btn {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    @include transition(all 0.4s);
+  }
+}

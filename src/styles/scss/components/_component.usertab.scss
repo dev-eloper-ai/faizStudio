@@ -1,0 +1,30 @@
+.userTab{
+    .nav{
+        &-tabs{
+            border: 0;
+        }
+        &-item{
+            &:not(:last-child){
+                margin-right: 25px;
+            }
+        }
+        &-link{
+            border: 0;
+            padding: 20px 0;
+            color: $text-gray-700;
+            position: relative;
+            &.active{
+                color: color(500);
+                &:after{
+                    @include absolutecenter(x);
+                    content: '';
+                    width: 60px;
+                    height: 4px;
+                    background-color: color(500);
+                    border-radius: 10px 10px 0 0;
+                    bottom:0;
+                }
+            }
+        }
+    }
+}
