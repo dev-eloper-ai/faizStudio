@@ -95,3 +95,48 @@
     animation-delay: calc(#{$i} / 10s);
   }
 }
+
+//Project card
+.projectCard{
+    padding: 30px;
+    &_count{
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+      border-radius: 50%;
+      border: 1px solid rgba(#DFE0E3, 0.30);
+      color: rgba(#DFE0E3, 0.30);
+      @include flexcenter('both');
+    }
+    img{
+      width: 100%;
+      filter: grayscale(1);
+      @include transition(all 0.3s ease);
+    }
+    h2{
+      font-size: 57px;
+      color: rgba(#DFE0E3, 0.70);
+      padding-left: 25px;
+      margin-bottom: 20px;
+    }
+    p{
+      font-size: 20px;
+      font-family: font(lt);
+      color: #DFE0E3;
+      margin-bottom: 50px;
+    }
+    &-even{
+      img{
+        margin-bottom: 50px;
+      }
+      p{
+        margin-bottom: 0;
+      }
+    }
+    &:hover{
+      img{
+        filter: grayscale(0);
+        transform: rotate(5deg);
+      }
+    }
+}

@@ -1,7 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef } from 'react';
 import { Col, Container, Navbar, Nav, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import AnimatedLetters from '../../component/AnimateLetters';
+import NumberCounter from 'number-counter';
 import 'animate.css';
 
 function HomePage() {
@@ -9,13 +10,43 @@ function HomePage() {
     const nameArray = ['W', 'o', 'r', 'k']
     const ourArray = ['O', 'u', 'r']
     const caseArray = ['C', 'a', 's', 'e', 'S', 't', 'u', 'd', 'y']
-    const expArray = ['E', 'x', 'p', 'e', 'r', 'i', 'e', 'n', 'c', 'e']
+    const expArray = ['E', 'x', 'p', 'e', 'r', 'i', 'e', 'n', 'c', 'e'];
+
     useEffect(() => {
         setTimeout(() => {
           setLetterClass('text-animate-hover')
         }, 4000)
       }, [])
 
+    const stickyRef = useRef(null);
+
+    useEffect(() => {
+      // Adding scroll event listener
+      document.addEventListener('scroll', horizontalScroll);
+  
+      return () => {
+        // Cleanup: Remove the scroll event listener when the component unmounts
+        document.removeEventListener('scroll', horizontalScroll);
+      };
+    }, []); // Empty dependency array ensures the effect runs only once on mount and cleans up on unmount
+  
+    const horizontalScroll = () => {
+      const sticky = stickyRef.current;
+  
+      if (!sticky) {
+        return; // Guard against accessing properties on a null element
+      }
+  
+      const stickyPosition = sticky.getBoundingClientRect().top;
+  
+      if (stickyPosition > 1) {
+        return;
+      } else {
+        const stickyParent = document.querySelector('.sticky-parent');
+        const scrolled = stickyParent.getBoundingClientRect().top;
+        sticky.scrollLeft = (sticky.scrollWidth / (stickyParent.getBoundingClientRect().height - sticky.getBoundingClientRect().height)) * (-scrolled) * 0.85;
+      }
+    };
     return (
         <>
             <header className='header'>
@@ -34,19 +65,43 @@ function HomePage() {
                 </Navbar>
             </header>
 
-            <section className='aboutUs py-100 pt-0'>
+            <section className='aboutUs py-100'>
                 <Container>
                     <div className='aboutUs_text'>
-                        <h2>Transforming ideas into captivating  <img src="/images/aboutus.svg" className='img-fluid' alt="aboutus"/>        realities, I sculpt seamless digital journey with a fusion of innovation & elegance</h2>
+                        <h2>Transforming ideas into captivating  <img src="/images/aboutus.svg" className='img-fluid' alt="aboutus"/> realities, I sculpt seamless digital journey with a fusion of innovation & elegance</h2>
                     </div>
 
-                    <div>
-                        <ul>
-                            <li>
-                                
-                            </li>
-                        </ul>
-                    </div>
+                    <Row className='justify-content-between'>
+                        <Col md={4}>
+                            <div className='counter counter-first'>
+                                <img src="/images/first.png" className='img-fluid w-100' alt="counter-top-img"/>
+                                {/* <h2>08 <span>+</span></h2> */}
+                                <h2>0<NumberCounter start={0} end={8} delay={4} className="increment"/><span>+</span></h2>
+                                <p>years of unwavering passion, I am a skilled UI/UX designer dedicated to creating immersive digital experiences.</p>
+                            </div>
+                        </Col>
+                        <Col md={3}>
+                            <div className='counter'>
+                                <img src="/images/second.png" className='img-fluid w-100' alt="counter-top-img"/>
+                                {/* <h2>27 <span>K</span></h2> */}
+                                <h2><NumberCounter start={0} end={27} delay={2} className="increment"/><span>K</span></h2>
+                                <p>Lorem ipsum dolor consectetur adip Aenean iaculis vitaer nulla blandit justo nec nec elit consectetur.</p>
+                            </div>
+                        </Col>
+                        <Col md={3}>
+                            <div className='counter'>
+                                <img src="/images/third.png" className='img-fluid w-100' alt="counter-top-img"/>
+                                {/* <h2>10 <span>+</span></h2> */}
+                                <h2><NumberCounter start={0} end={10} delay={3} className="increment"/><span>+</span></h2>
+                                <p>Lorem ipsum dolor consectetur adip Aenean iaculis vitaer nulla blandit justo nec nec elit consectetur.</p>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+            <section className='videoSec py-100 pt-0'>
+                <Container>
+                    <img src="/images/video-section.png" className='img-fluid w-100' alt="video-section"/>
                 </Container>
             </section>
             <section className='caseStudy py-100'>
@@ -81,6 +136,65 @@ function HomePage() {
                         </Col>
                     </Row>
                 </Container>
+
+                <div>
+                    <div className="sticky-parent">
+                        <div className="sticky" ref={stickyRef}>
+                            <div className="horizontal">
+                                <div className="dim">
+                                    <div className='projectCard'>
+                                        <div className='d-flex align-items-start'>
+                                            <span className='projectCard_count'>01</span>
+                                            <h2>eRides</h2>
+                                        </div>
+                                        <p>Now introduce e-rides concept in your vicinity and allow people to tour around...</p>
+                                        <img src="/images/slider-card-1.png" className='img-fluid' alt='slideimg'/>
+                                    </div>
+                                </div>
+                                <div className="dim">
+                                    <div className='projectCard projectCard-even'>
+                                        <img src="/images/slider-card-2.png" className='img-fluid' alt='slideimg'/>
+                                        <div className='d-flex align-items-start'>
+                                            <span className='projectCard_count'>02</span>
+                                            <h2>Quick Bites</h2>
+                                        </div>
+                                        <p>Unleashing the Flavor Revolution: Feast your eyes on the UX symphony of QuickBites- A QSR App...</p>
+                                    </div>
+                                </div>  
+                                <div className="dim">
+                                    <div className='projectCard'>
+                                        <div className='d-flex align-items-start'>
+                                            <span className='projectCard_count'>03</span>
+                                            <h2>Mega Mover</h2>
+                                        </div>
+                                        <p>Unveiling a Brand New Visual Identity Revolution for Online logistics App-MegaMover!</p>
+                                        <img src="/images/slider-card-3.png" className='img-fluid' alt='slideimg'/>
+                                    </div>
+                                </div>  
+                                <div className="dim">
+                                    <div className='projectCard projectCard-even'>
+                                        <img src="/images/slider-card-2.png" className='img-fluid' alt='slideimg'/>
+                                        <div className='d-flex align-items-start'>
+                                            <span className='projectCard_count'>04</span>
+                                            <h2>Quick Bites</h2>
+                                        </div>
+                                        <p>Unleashing the Flavor Revolution: Feast your eyes on the UX symphony of QuickBites- A QSR App...</p>
+                                    </div>
+                                </div>  
+                                <div className="dim">
+                                    <div className='projectCard'>
+                                        <div className='d-flex align-items-start'>
+                                            <span className='projectCard_count'>05</span>
+                                            <h2>Quick Bites</h2>
+                                        </div>
+                                        <p>Unleashing the Flavor Revolution: Feast your eyes on the UX symphony of QuickBites- A QSR App...</p>
+                                        <img src="/images/slider-card-2.png" className='img-fluid' alt='slideimg'/>
+                                    </div>
+                                </div>                
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <section className='workedExp py-100'>
