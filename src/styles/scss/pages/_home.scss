@@ -1,37 +1,111 @@
-.aboutUs{
-    &_text{
+.bannerSec {
+    padding-top: 200px;
+
+    &_main {
+        h1 {
+            font-size: 86px;
+            font-family: font(sb);
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        &_img {
+            text-align: center;
+            position: relative;
+            max-width: 670px;
+            margin: 0 auto;
+        }
+
+        &_tagline {
+            color: #868687;
+            font-size: 28px;
+            text-align: center;
+            line-height: 1.4;
+            margin: 25px 0;
+            span {
+                &:nth-child(1) {
+                    color: color(50);
+                }
+
+                &:nth-child(2) {
+                    color: #8975FF;
+                }
+
+                &:nth-child(3) {
+                    color: #F65D1A;
+                }
+            }
+        }
+
+        &_circle {
+            position: absolute;
+            top: 100px;
+            left: -140px;
+            animation: animName 6s linear infinite;
+        }
+
+        @keyframes animName {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    &_leftimg {
+        top: 0;
+        left: 160px;
+    }
+
+    &_rightimg {
+        top: 215px;
+        right: 0;
+    }
+}
+
+.aboutUs {
+    &_text {
         text-align: center;
         padding: 0 35px;
         margin-bottom: 100px;
-        h2{
+
+        h2 {
             font-size: 90px;
             line-height: 1.2;
         }
     }
-    .counter{
-        h2{
+
+    .counter {
+        h2 {
             font-size: 160px;
             font-family: font(bd);
             color: color(50);
             display: flex;
             align-items: top;
-            span{
+
+            span {
                 font-size: 70px;
                 display: block;
                 padding-left: 20px;
                 padding-top: 15px;
             }
         }
-        p{
+
+        p {
             font-size: 20px;
             font-family: font(lt);
             color: #868687;
             line-height: 1.3;
         }
-        &-first{
-            h2{
+
+        &-first {
+            h2 {
                 font-size: 260px;
-                span{
+
+                span {
                     font-size: 130px;
                 }
             }
@@ -39,28 +113,32 @@
     }
 }
 
-.workedExp{
+.workedExp {
     padding-bottom: 140px;
     background-image: url('#{$imageurl}/square-bg.svg');
     background-size: auto;
     background-repeat: no-repeat;
-    background-position: left -472px bottom 0 ;
-    &_expList{
-        ul{
-            li{
-                border-bottom: 1px solid rgba(#868687,0.30);
+    background-position: left -472px bottom 0;
+
+    &_expList {
+        ul {
+            li {
+                border-bottom: 1px solid rgba(#868687, 0.30);
                 padding: 30px 0;
             }
         }
-        &_info{
-            p{
+
+        &_info {
+            p {
                 font-size: 28px;
                 font-family: font(lt);
                 line-height: 1.3;
                 margin-left: 30px;
             }
         }
-        .designation, .duration{
+
+        .designation,
+        .duration {
             font-size: 20px;
             font-family: font(lt);
             color: #868687;
@@ -68,33 +146,37 @@
     }
 }
 
-.sticky-parent{
+.sticky-parent {
     height: 400vh;
-  }
-  .sticky{
+}
+
+.sticky {
     position: sticky;
     padding-top: 20px;
     top: 0px;
     max-height: 100vh;
     overflow-x: hidden;
     overflow-y: hidden;
-  }
-  .dim{
+}
+
+.dim {
     display: block;
     min-width: 33.33%;
     height: 875px;
-  }
-  .horizontal{
+}
+
+.horizontal {
     display: flex;
-  }
-  .br{
+}
+
+.br {
     outline: solid;
-  }
-  
-  @media (max-width: 620px) {
-    .dim{
-      display: block;
-      min-width: 100vw;
-      height: 100vh;
+}
+
+@media (max-width: 620px) {
+    .dim {
+        display: block;
+        min-width: 100vw;
+        height: 100vh;
     }
-  }
+}

@@ -65,6 +65,39 @@ function HomePage() {
                 </Navbar>
             </header>
 
+            <section className='bannerSec position-relative'>
+                <Container>
+                    <div className='bannerSec_main'>
+                        <h1><span>hey</span>
+                            Buddy.. <br/>
+                            I am Faizan Ahmed<br/>
+                            UIUX Designer
+                        </h1>
+                        <div className='bannerSec_main_img'>
+                            <img src="/images/bannerimg.png" className='img-fluid' alt="bannerimg"/>
+                            <div className='bannerSec_main_circle'>
+                                <img src="/images/banner-circle-img.png" className='img-fluid' alt="banner-circle-img"/>
+                            </div>
+                        </div>
+
+                        <p className='bannerSec_main_tagline'> I'm a selectively 
+                            <span>skilled product designer</span> <br/> with strong focus on producing 
+                            <span>high quality</span> & <br/> impactful 
+                            <span>digital experience.</span></p>
+                    </div>
+                </Container>
+                <div className='bannerSec_leftimg position-absolute'>
+                    <img src="/images/banner-top-left.png" className='img-fluid' alt="banner-top-left"/>
+                </div>
+                <div className='bannerSec_rightimg position-absolute'>
+                    <img src="/images/banner-top-right.png" className='img-fluid' alt="banner-top-right"/>
+                </div>
+<div className='text-center'>
+
+                <img src="/images/banner-btm-path.svg" className='img-fluid' alt="banner-btm-path"/>
+</div>
+            </section>
+
             <section className='aboutUs py-100'>
                 <Container>
                     <div className='aboutUs_text'>
