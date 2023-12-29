@@ -1,12 +1,19 @@
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/scss/custom.scss";
-import { Home, ProjectDetails } from './pages';
+import HomePage from './pages/Home';
+import ProjectDetails from './pages/ProjectDetails';
+
 
 function App() {
   return (
-    <Home />
-    // <ProjectDetails />
+    <>
+      <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/detailpage" element={<ProjectDetails />} />
+      </Routes>
+    </>
   );
 }
 

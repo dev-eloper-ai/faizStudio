@@ -1,0 +1,47 @@
+.backBtn{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    color: rgba(color(50),0.60);
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    em{
+        margin-right: 10px;
+    }
+}
+.projectDetails{
+    h1{
+        font-size: 86px;
+        font-family: font(md);
+        line-height: 1;
+        margin-bottom: 80px;
+        padding-top: 100px;
+    }
+    ul{
+        list-style: none;
+        li{
+            &:not(:last-child){
+                margin-bottom: 60px;
+            }
+            p{
+                font-size: 20px;
+                font-family: font(lt);
+                color: #868687;
+                margin-bottom: 10px;
+            }
+            h3{
+                font-size: 20px;
+                font-family: font(md);
+                color: #DFE0E3;
+                margin-bottom: 0;
+            }
+        }
+    }
+    .para{
+        font-size: 20px;
+        font-family: font(lt);
+        color: #868687;
+        line-height: 1.5;
+    }
+}

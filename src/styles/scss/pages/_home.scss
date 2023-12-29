@@ -1,3 +1,48 @@
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.loop-text {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+
+    p {
+        position: absolute;
+        opacity: 0;
+        transition: 0.05s ease - out;
+        font-size: 80px;
+        font-weight: 600;
+        font-family: poppins;
+        color: #ffffff;
+
+        &.show {
+            opacity: 1;
+        }
+
+    }
+}
+.loader {
+    opacity: 1;
+    transition: opacity 0.5s ease-out; /* Set the transition property */
+  }
+  
+  .loader.hidden {
+    opacity: 0;
+  }
 .bannerSec {
     padding-top: 200px;
 
@@ -7,7 +52,22 @@
             font-family: font(sb);
             text-align: center;
             margin-bottom: 50px;
+            position: relative;
+
+            &:first-child {
+                position: relative;
+                display: inline-block;
+                margin-bottom: 20px;
+                padding-left: 130px;
+
+                img {
+                    position: absolute;
+                    left: 0;
+                    top: -30px;
+                }
+            }
         }
+
 
         &_img {
             text-align: center;
@@ -22,16 +82,17 @@
             text-align: center;
             line-height: 1.4;
             margin: 25px 0;
+
             span {
-                &:nth-child(1) {
+                &.text1 {
                     color: color(50);
                 }
 
-                &:nth-child(2) {
+                &.text2 {
                     color: #8975FF;
                 }
 
-                &:nth-child(3) {
+                &.text3 {
                     color: #F65D1A;
                 }
             }
@@ -58,11 +119,44 @@
     &_leftimg {
         top: 0;
         left: 160px;
+
+        p {
+            font-size: 18px;
+            transform: rotate(-90deg);
+            transform-origin: 0 0;
+            position: absolute;
+            top: 89%;
+            left: -30px;
+        }
     }
 
     &_rightimg {
         top: 215px;
         right: 0;
+
+        p {
+            margin-top: 15px;
+            font-size: 18px;
+        }
+    }
+
+    .path {
+        stroke-dasharray: 1600;
+        stroke-dashoffset: 1600;
+    }
+
+    .animate {
+        animation: dash 3s linear forwards;
+    }
+
+    @keyframes dash {
+        from {
+            stroke-dashoffset: 1600;
+        }
+
+        to {
+            stroke-dashoffset: 0;
+        }
     }
 }
 
@@ -75,6 +169,11 @@
         h2 {
             font-size: 90px;
             line-height: 1.2;
+
+            img {
+                height: 80px;
+                margin-top: -20px;
+            }
         }
     }
 
