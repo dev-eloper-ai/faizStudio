@@ -60,12 +60,47 @@
                 }
                 a{
                     display: block;
+                    font-family: font(md);
                     color: rgba(#DFE0E3, 0.30);
                     @include transition(all 0.3s ease);
                     &:hover{
-                        color: #FF41C6;
                         transform: rotate(-5deg);
                         @include transition(all 0.3s ease);
+                    }
+                }
+                &:nth-child(1){
+                    a{
+                        &:hover{
+                            color: #0a66c2;
+                        }
+                    }
+                }
+                &:nth-child(2){
+                    a{
+                        &:hover{
+                            color: #FF41C6;
+                        }
+                    }
+                }
+                &:nth-child(3){
+                    a{
+                        &:hover{
+                            color: #ffffff;
+                        }
+                    }
+                }
+                &:nth-child(4){
+                    a{
+                        &:hover{
+                            color: #C13584;
+                        }
+                    }
+                }
+                &:nth-child(5){
+                    a{
+                        &:hover{
+                            color: #FD1D1D;
+                        }
                     }
                 }
             }

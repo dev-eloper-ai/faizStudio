@@ -10,6 +10,7 @@ import Loader from '../component/Loader';
 function HomePage() {
 
     const [loading, setLoading] = useState(true);
+    const [isVisible, setIsVisible] = useState(false);
     const [letterClass, setLetterClass] = useState('text-animate')
     const nameArray = ['W', 'o', 'r', 'k']
     const ourArray = ['O', 'u', 'r']
@@ -60,13 +61,17 @@ function HomePage() {
         // Simulate a data fetch
         setTimeout(() => {
           setLoading(false); // Set loading to false once data is fetched
+          setTimeout(() => {
+            setIsVisible(true);
+          }, 400);
         }, 3500); // Simulating a 2-second delay
       }, []);
     return (
         <>
         {loading ? <Loader className={loading ? '' : 'hidden'} /> : 
             <>
-            
+            <main className={`content ${isVisible ? 'visible' : ''}`}>
+            {/* Header  */}
                 <header className='header'>
                     <Navbar>
                         <Link to="#" className='menuIcon'><em className='icon icon-menu-alt' /></Link>
@@ -82,7 +87,7 @@ function HomePage() {
                         </div>
                     </Navbar>
                 </header>
-
+            {/* Banner Section  */}
                 <section className='bannerSec position-relative' id="home">
                     <Container>
                         <div className='bannerSec_main text-center'>
@@ -125,7 +130,7 @@ function HomePage() {
                         {/* <img src="/images/banner-btm-path.svg" className='img-fluid' alt="banner-btm-path" /> */}
                     </div>
                 </section>
-
+            {/* About us section  */}
                 <section className='aboutUs py-100' id="about">
                     <Container>
                         <div className='aboutUs_text'>
@@ -145,26 +150,28 @@ function HomePage() {
                                 <div className='counter'>
                                     <img src="/images/second.png" className='img-fluid w-100' alt="counter-top-img" />
                                     {/* <h2>27 <span>K</span></h2> */}
-                                    <h2><NumberCounter start={0} end={27} delay={2} className="increment" /><span>K</span></h2>
-                                    <p>Lorem ipsum dolor consectetur adip Aenean iaculis vitaer nulla blandit justo nec nec elit consectetur.</p>
+                                    <h2>0<NumberCounter start={0} end={1} delay={2} className="increment" /><span>K+</span></h2>
+                                    <p>Each project reflects a commitment to excellence and innovation in design.</p>
                                 </div>
                             </Col>
                             <Col md={3}>
                                 <div className='counter'>
                                     <img src="/images/third.png" className='img-fluid w-100' alt="counter-top-img" />
                                     {/* <h2>10 <span>+</span></h2> */}
-                                    <h2><NumberCounter start={0} end={10} delay={3} className="increment" /><span>+</span></h2>
-                                    <p>Lorem ipsum dolor consectetur adip Aenean iaculis vitaer nulla blandit justo nec nec elit consectetur.</p>
+                                    <h2><NumberCounter start={0} end={50} delay={3} className="increment" /><span>+</span></h2>
+                                    <p>Building strong connections & fostering a positive work environment are integral to my approach in collaborative projects.</p>
                                 </div>
                             </Col>
                         </Row>
                     </Container>
                 </section>
+            {/* Video Section  */}
                 <section className='videoSec py-100 pt-0'>
                     <Container>
                         <img src="/images/video-section.png" className='img-fluid w-100' alt="video-section" />
                     </Container>
                 </section>
+            {/* Case study section  */}
                 <section className='caseStudy py-100' id="casestudy">
                     <Container>
                         <Row>
@@ -375,7 +382,7 @@ function HomePage() {
                         </div>
                     </div>
                 </section>
-
+            {/* Work Experience section  */}
                 <section className='workedExp py-100' id="experiece">
                     <Container>
                         <Row>
@@ -401,7 +408,7 @@ function HomePage() {
                             <Col md={3}>
                                 <div className='commonHead'>
                                     <h2 className='commonHead_subtitle'>
-                                        <p>I'm always open to new opportunities, collaborations, and discussions about the exciting world of design.</p>
+                                        <p>I've crafted delightful digital journeys. From sketch to screen, I've transformed ideas into user-friendly designs.</p>
                                         <Link to="#" className='commonHead_link'>Learn more <em className='icon icon-arrow-right' /></Link>
                                     </h2>
                                 </div>
@@ -506,7 +513,7 @@ function HomePage() {
                         </Row>
                     </Container>
                 </section>
-
+            {/* Footer  */}
                 <footer className='footer' id="contact">
                     <div className="marquee-container">
                         <div className="marquee-content">
@@ -533,6 +540,7 @@ function HomePage() {
                         </div>
                     </Container>
                 </footer>
+            </main>
             </>
         }
         </>
