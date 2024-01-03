@@ -418,23 +418,29 @@ function HomePage() {
                             </Col>
                         </Row>
                         <Row className='workedExp_expList justify-content-end'>
-                            <Col md={9}>
+                            <Col xl={9} lg={11}>
                                 <ul className='list-unstyled mb-0 ps-0'>
                                     <li>
                                         <Row>
                                             <Col md={5}>
-                                                <div className='workedExp_expList_info d-flex align-items-center'>
+                                                <div className='workedExp_expList_info d-flex align-items-start'>
                                                     <div className='logo'>
                                                         <img src="/images/exp-codiant.svg" className='img-fluid' alt="codiant-logo" />
                                                     </div>
-                                                    <p className='mb-0'>Codiant Software<br /> Technologies Pvt. Ltd.</p>
+                                                    <div>
+                                                        <p className='mb-md-0'>Codiant Software<br /> Technologies Pvt. Ltd.</p>
+                                                        <div className='d-md-none d-block'>
+                                                            <p className='designation mb-1'>Sr. UIUX Designer</p>
+                                                            <p className='duration mb-0'>Oct 2021 - Present</p>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </Col>
                                             <Col md={3}>
-                                                <p className='designation'>Sr. UIUX Designer</p>
+                                                <p className='designation d-md-block d-none'>Sr. UIUX Designer</p>
                                             </Col>
                                             <Col md={4}>
-                                                <p className='duration'>Oct 2021 - Present</p>
+                                                <p className='duration d-md-block d-none'>Oct 2021 - Present</p>
                                             </Col>
                                         </Row>
                                     </li>
@@ -445,14 +451,20 @@ function HomePage() {
                                                     <div className='logo'>
                                                         <img src="/images/exp-pixbrand.svg" className='img-fluid' alt="pixbrand-logo" />
                                                     </div>
-                                                    <p className='mb-0'>Pix Brand Private<br /> Limited</p>
+                                                    <div>
+                                                        <p className='mb-0'>Pix Brand Private<br /> Limited</p>
+                                                        <div className='d-md-none d-block'>
+                                                            <p className='designation mb-1'>Sr. UIUX Designer</p>
+                                                            <p className='duration mb-0'>Sep 2020 - Oct 2021</p>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </Col>
                                             <Col md={3}>
-                                                <p className='designation'>Sr. UIUX Designer</p>
+                                                <p className='designation d-md-block d-none'>Sr. UIUX Designer</p>
                                             </Col>
                                             <Col md={4}>
-                                                <p className='duration'>Sep 2020 - Oct 2021</p>
+                                                <p className='duration d-md-block d-none'>Sep 2020 - Oct 2021</p>
                                             </Col>
                                         </Row>
                                     </li>
@@ -463,14 +475,20 @@ function HomePage() {
                                                     <div className='logo'>
                                                         <img src="/images/exp-faizstudio.svg" className='img-fluid' alt="faizstudio-logo" />
                                                     </div>
-                                                    <p className='mb-0'>FabStudio <br />( Freelance Design )</p>
+                                                    <div>
+                                                        <p className='mb-0'>FabStudio <br />( Freelance Design )</p>
+                                                        <div className='d-md-none d-block'>
+                                                            <p className='designation mb-1'>Founder & UIUX Designer</p>
+                                                            <p className='duration mb-0'>Aug 2019 - Jul 2021</p>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </Col>
                                             <Col md={3}>
-                                                <p className='designation'>Founder & UIUX Designer</p>
+                                                <p className='designation d-md-block d-none'>Founder & UIUX Designer</p>
                                             </Col>
                                             <Col md={4}>
-                                                <p className='duration'>Aug 2019 - Jul 2021</p>
+                                                <p className='duration d-md-block d-none'>Aug 2019 - Jul 2021</p>
                                             </Col>
                                         </Row>
                                     </li>
@@ -482,14 +500,20 @@ function HomePage() {
                                                     <div className='logo'>
                                                         <img src="/images/exp-pxper.svg" className='img-fluid' alt="pxper-logo" />
                                                     </div>
-                                                    <p className='mb-0'>PxPer by Shree KDK <br />Enterprise</p>
+                                                    <div>
+                                                        <p className='mb-0'>PxPer by Shree KDK <br />Enterprise</p>
+                                                        <div className='d-md-none d-block'>
+                                                            <p className='designation mb-1'>Graphic Designer & Product Designer</p> 
+                                                            <p className='duration mb-0'>Jul 2016 - Mar 2019</p> 
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </Col>
                                             <Col md={3}>
-                                                <p className='designation'>Graphic Designer & Product Designer</p>
+                                                <p className='designation d-md-block d-none'>Graphic Designer & Product Designer</p>
                                             </Col>
                                             <Col md={4}>
-                                                <p className='duration'>Jul 2016 - Mar 2019</p>
+                                                <p className='duration d-md-block d-none'>Jul 2016 - Mar 2019</p>
                                             </Col>
                                         </Row>
                                     </li>
@@ -500,14 +524,20 @@ function HomePage() {
                                                     <div className='logo'>
                                                         <img src="/images/exp-friends.svg" className='img-fluid' alt="friends-logo" />
                                                     </div>
-                                                    <p className='mb-0'>Friends Graphics & <br />Printing Press</p>
+                                                    <div>
+                                                        <p className='mb-0'>Friends Graphics & <br />Printing Press</p>
+                                                        <div className='d-md-none d-block'>
+                                                            <p className='designation mb-1'>Internship Trainee</p>
+                                                            <p className='duration mb-0'>May 2013 - Mar 2016</p>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </Col>
                                             <Col md={3}>
-                                                <p className='designation'>Internship Trainee</p>
+                                                <p className='designation d-md-block d-none'>Internship Trainee</p>
                                             </Col>
                                             <Col md={4}>
-                                                <p className='duration'>May 2013 - Mar 2016</p>
+                                                <p className='duration d-md-block d-none'>May 2013 - Mar 2016</p>
                                             </Col>
                                         </Row>
                                     </li>

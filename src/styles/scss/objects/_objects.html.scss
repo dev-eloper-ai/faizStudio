@@ -25,7 +25,17 @@
   @include media-breakpoint-down(lg){
     padding-bottom: 150px;
     &::after{
+      width: calc(100% - 80px);
       height: 130px;
+      border-radius: 30px;
+    }
+  }
+  @include media-breakpoint-down(md){
+    padding-bottom: 120px;
+    &::after{
+      width: calc(100% - 50px);
+      height: 100px;
+      border-radius: 20px;
     }
   }
 }
