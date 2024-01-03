@@ -178,7 +178,7 @@ function HomePage() {
                 <section className='caseStudy py-100' id="casestudy">
                     <Container>
                         <Row>
-                            <Col md={9}>
+                            <Col xxl={9} md={8}>
                                 <div className='commonHead'>
                                     <h2 className='commonHead_title'>
                                         {/* <p>Work</p> */}
@@ -197,7 +197,7 @@ function HomePage() {
                                     </h2>
                                 </div>
                             </Col>
-                            <Col md={3}>
+                            <Col xxl={3} md={4}>
                                 <div className='commonHead'>
                                     <h2 className='commonHead_subtitle'>
                                         <p>Explore latest casestudy showcasing how innovative solutions transformed challenges into success stories seamlessly.</p>
@@ -389,7 +389,7 @@ function HomePage() {
                 <section className='workedExp py-100' id="experiece">
                     <Container>
                         <Row>
-                            <Col md={9}>
+                            <Col xxl={9} md={8}>
                                 <div className='commonHead'>
                                     <h2 className='commonHead_title'>
                                         {/* <p>Work</p> */}
@@ -408,7 +408,7 @@ function HomePage() {
                                     </h2>
                                 </div>
                             </Col>
-                            <Col md={3}>
+                            <Col xxl={3} md={4}>
                                 <div className='commonHead'>
                                     <h2 className='commonHead_subtitle'>
                                         <p>I've crafted delightful digital journeys. From sketch to screen, I've transformed ideas into user-friendly designs.</p>

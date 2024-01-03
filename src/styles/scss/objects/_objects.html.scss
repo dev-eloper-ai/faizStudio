@@ -42,8 +42,10 @@
     color: color(50);
     line-height: 1;
     font-family: font(sb);
+    margin-bottom: 0;
     .btmText{
       padding-left: 180px;
+      margin-bottom: 0;
     }
   }
   &_subtitle{
@@ -63,6 +65,77 @@
     border-bottom: 2px solid color(50);
     em{
       margin-left: 10px;
+    }
+  }
+  @media(max-width: 1600px){
+    &_title{
+      font-size: 125px;
+    }
+  }
+  @include media-breakpoint-down(xxl){
+    margin-bottom: 60px;
+    &_title{
+      font-size: 100px;
+      .btmText{
+        padding-left: 130px;
+      }
+    }
+    &_subtitle{
+      p{
+        margin-bottom: 30px;
+      }
+    }
+  }
+  @include media-breakpoint-down(xl){
+    margin-bottom: 50px;
+    &_title{
+      font-size: 85px;
+    }
+    &_subtitle{
+      p{
+        font-size: 18px;
+      }
+    }
+    &_link{
+      font-size: 18px;
+    }
+  }
+  @include media-breakpoint-down(lg){
+    margin-bottom: 30px;
+    &_title{
+      font-size: 70px;
+    }
+    &_subtitle{
+      p{
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+    }
+    &_link{
+      font-size: 16px;
+    }
+  }
+  @include media-breakpoint-down(md){
+    margin-bottom: 30px;
+    &_title{
+      font-size: 60px;
+    }
+    .btmText, &_subtitle{
+      padding-left: 90px;
+    }
+    &_subtitle{
+      p{
+        margin-bottom: 10px;
+      }
+    }
+  }
+  @include media-breakpoint-down(sm){
+    margin-bottom: 20px;
+    &_title{
+      font-size: 55px;
+    }
+    .btmText, &_subtitle{
+      padding-left: 60px;
     }
   }
 }
@@ -137,6 +210,17 @@
       img{
         filter: grayscale(0);
         transform: rotate(5deg);
+      }
+    }
+    @include media-breakpoint-down(xxl){
+      padding: 20px;
+      h2{
+        font-size: 42px;
+        margin-bottom: 15px;
+      }
+      p{
+        font-size: 18px;
+        margin-bottom: 30px;
       }
     }
 }
