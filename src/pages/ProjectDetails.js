@@ -77,11 +77,11 @@ function ProjectDetails() {
 
                         <div className='footer_links'>
                             <ul className='list-unstyled mb-0 ps-0 d-flex align-items-center'>
-                                <li><Link to="">Linkedin</Link></li>
-                                <li><Link to="">Dribbble</Link></li>
-                                <li><Link to="">Behance</Link></li>
-                                <li><Link to="">Instagram</Link></li>
-                                <li><Link to="">Youtube</Link></li>
+                                <li><Link to="https://www.linkedin.com/in/imfaizu/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">Linkedin</Link></li>
+                                <li><Link to="https://dribbble.com/fabstudio_design">Dribbble</Link></li>
+                                <li><Link to="https://www.behance.net/fabstudio_design">Behance</Link></li>
+                                <li><Link to="https://www.instagram.com/fabstudio.design?utm_medium=copy_link">Instagram</Link></li>
+                                <li><Link to="https://www.youtube.com/@fabstudio2879">Youtube</Link></li>
                             </ul>
                         </div>
                     </div>
