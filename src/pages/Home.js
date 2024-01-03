@@ -99,7 +99,7 @@ function HomePage() {
                                 UIUX Designer
                             </h1>
                             <div className='bannerSec_main_img'>
-                                <Link to="/detailpage">
+                                <Link to="/project6">
                                     <img src="/images/bannerimg.png" className='img-fluid' alt="bannerimg" />
                                 </Link>
                                 <div className='bannerSec_main_circle'>
@@ -213,7 +213,7 @@ function HomePage() {
                             <div className="sticky" ref={stickyRef}>
                                 <div className="horizontal">
                                     <div className="dim">
-                                        <Link to="/">
+                                        <Link to="/project1">
                                             <div className='projectCard'>
                                                 <div className='d-flex align-items-start'>
                                                     <span className='projectCard_count'>01</span>
@@ -225,7 +225,7 @@ function HomePage() {
                                         </Link>
                                     </div>
                                     <div className="dim">
-                                        <Link to="/">
+                                        <Link to="/project2">
                                             <div className='projectCard projectCard-even'>
                                                 <img src="/images/projects/Cannabies.png" className='img-fluid' alt='Cannabies' />
                                                 <div className='d-flex align-items-start'>
@@ -237,7 +237,7 @@ function HomePage() {
                                         </Link>
                                     </div>
                                     <div className="dim">
-                                        <Link to="/">
+                                        <Link to="/project3">
                                             <div className='projectCard '>
                                                 <div className='d-flex align-items-start'>
                                                     <span className='projectCard_count'>03</span>
@@ -249,7 +249,7 @@ function HomePage() {
                                         </Link>
                                     </div>
                                     <div className="dim">
-                                        <Link to="/">
+                                        <Link to="/project4">
                                             <div className='projectCard projectCard-even'>
                                                 <img src="/images/projects/eRides.png" className='img-fluid' alt='eRides' />
                                                 <div className='d-flex align-items-start'>
@@ -261,7 +261,7 @@ function HomePage() {
                                         </Link>
                                     </div>
                                     <div className="dim">
-                                        <Link to="/">
+                                        <Link to="/project5">
                                             <div className='projectCard'>
                                                 <div className='d-flex align-items-start'>
                                                     <span className='projectCard_count'>05</span>
@@ -273,7 +273,7 @@ function HomePage() {
                                         </Link>
                                     </div>
                                     <div className="dim">
-                                        <Link to="/">
+                                        <Link to="/project6">
                                             <div className='projectCard projectCard-even'>
                                                 <img src="/images/projects/GroShoppy.png" className='img-fluid' alt='GroShoppy' />
                                                 <div className='d-flex align-items-start'>
@@ -285,7 +285,7 @@ function HomePage() {
                                         </Link>
                                     </div>
                                     <div className="dim">
-                                        <Link to="/">
+                                        <Link to="/project7">
                                             <div className='projectCard'>
                                                 <div className='d-flex align-items-start'>
                                                     <span className='projectCard_count'>07</span>
@@ -297,7 +297,7 @@ function HomePage() {
                                         </Link>
                                     </div>
                                     <div className="dim">
-                                        <Link to="/">
+                                        <Link to="/project8">
                                             <div className='projectCard projectCard-even'>
                                                 <img src="/images/projects/PrimWork.png" className='img-fluid' alt='PrimWork' />
                                                 <div className='d-flex align-items-start'>
@@ -309,7 +309,7 @@ function HomePage() {
                                         </Link>
                                     </div>
                                     <div className="dim">
-                                        <Link to="/">
+                                        <Link to="/project9">
                                             <div className='projectCard'>
                                                 <div className='d-flex align-items-start'>
                                                     <span className='projectCard_count'>09</span>
@@ -321,7 +321,7 @@ function HomePage() {
                                         </Link>
                                     </div>
                                     <div className="dim">
-                                        <Link to="/">
+                                        <Link to="/project10">
                                             <div className='projectCard projectCard-even'>
                                                 <img src="/images/projects/ShoeGallery.png" className='img-fluid' alt='ShoeGallery' />
                                                 <div className='d-flex align-items-start'>
@@ -333,7 +333,7 @@ function HomePage() {
                                         </Link>
                                     </div>
                                     <div className="dim">
-                                        <Link to="/">
+                                        <Link to="/project11">
                                             <div className='projectCard'>
                                                 <div className='d-flex align-items-start'>
                                                     <span className='projectCard_count'>11</span>
@@ -345,7 +345,7 @@ function HomePage() {
                                         </Link>
                                     </div>
                                     <div className="dim">
-                                        <Link to="/">
+                                        <Link to="/project12">
                                             <div className='projectCard projectCard-even'>
                                                 <img src="/images/projects/The-Arabian.png" className='img-fluid' alt='The-Arabian' />
                                                 <div className='d-flex align-items-start'>
@@ -357,7 +357,7 @@ function HomePage() {
                                         </Link>
                                     </div>
                                     <div className="dim">
-                                        <Link to="/">
+                                        <Link to="/project13">
                                             <div className='projectCard'>
                                                 <div className='d-flex align-items-start'>
                                                     <span className='projectCard_count'>13</span>
@@ -369,7 +369,7 @@ function HomePage() {
                                         </Link>
                                     </div>
                                     <div className="dim">
-                                        <Link to="/">
+                                        <Link to="/project14">
                                             <div className='projectCard projectCard-even'>
                                                 <img src="/images/projects/Yuval.png" className='img-fluid' alt='Yuval' />
                                                 <div className='d-flex align-items-start'>
