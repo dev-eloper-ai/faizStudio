@@ -543,6 +543,9 @@
     max-height: 100vh;
     overflow-x: hidden;
     overflow-y: hidden;
+    @include media-breakpoint-down(sm){
+        padding-top: 80px
+    }
 }
 
 .dim {
