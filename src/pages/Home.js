@@ -74,7 +74,7 @@ function HomePage() {
             {/* Header  */}
                 <header className='header'>
                     <Navbar>
-                        <Link to="#" className='menuIcon'><em className='icon icon-menu-alt' /></Link>
+                        <Link to="#" className='menuIcon d-md-block d-none'><em className='icon icon-menu-alt' /></Link>
                         <Nav>
                             <Nav.Link href="#home" className='active'>Home</Nav.Link>
                             <Nav.Link href="#about">About</Nav.Link>
@@ -82,7 +82,7 @@ function HomePage() {
                             <Nav.Link href="#experiece">Experience</Nav.Link>
                             <Nav.Link href="#contact">Contact</Nav.Link>
                         </Nav>
-                        <div>
+                        <div className='d-md-block d-none'>
                             <img src="/images/box-flip.svg" className='img-fluid' alt="box-flip" />
                         </div>
                     </Navbar>
@@ -137,26 +137,29 @@ function HomePage() {
                             <h2>Transforming ideas into captivating  <img src="/images/about_image.png" className='img-fluid' height="100" alt="aboutus" /> realities, I sculpt seamless digital journey with a fusion of innovation & elegance</h2>
                         </div>
 
-                        <Row className='justify-content-between'>
-                            <Col md={4}>
+                        <Row className='justify-content-around justify-content-xxl-between'>
+                            <Col lg={4}>
                                 <div className='counter counter-first'>
-                                    <img src="/images/first.png" className='img-fluid w-100' alt="counter-top-img" />
+                                    <img src="/images/first.png" className='d-lg-block d-none img-fluid w-100' alt="counter-top-img" />
+                                    <img src="/images/first-mobile.png" className='d-lg-none d-block img-fluid' alt="counter-top-img" />
                                     {/* <h2>08 <span>+</span></h2> */}
                                     <h2>0<NumberCounter start={0} end={8} delay={4} className="increment" /><span>+</span></h2>
                                     <p>years of unwavering passion, I am a skilled UI/UX designer dedicated to creating immersive digital experiences.</p>
                                 </div>
                             </Col>
-                            <Col md={3}>
+                            <Col lg={3}>
                                 <div className='counter'>
-                                    <img src="/images/second.png" className='img-fluid w-100' alt="counter-top-img" />
+                                    <img src="/images/second.png" className='d-lg-block d-none img-fluid w-100' alt="counter-top-img" />
+                                    <img src="/images/second-mobile.png" className='d-lg-none d-block img-fluid' alt="counter-top-img" />
                                     {/* <h2>27 <span>K</span></h2> */}
                                     <h2>0<NumberCounter start={0} end={1} delay={2} className="increment" /><span>K+</span></h2>
                                     <p>Each project reflects a commitment to excellence and innovation in design.</p>
                                 </div>
                             </Col>
-                            <Col md={3}>
+                            <Col lg={3}>
                                 <div className='counter'>
-                                    <img src="/images/third.png" className='img-fluid w-100' alt="counter-top-img" />
+                                    <img src="/images/third.png" className='d-lg-block d-none img-fluid w-100' alt="counter-top-img" />
+                                    <img src="/images/third-mobile.png" className='d-lg-none d-block img-fluid' alt="counter-top-img" />
                                     {/* <h2>10 <span>+</span></h2> */}
                                     <h2><NumberCounter start={0} end={50} delay={3} className="increment" /><span>+</span></h2>
                                     <p>Building strong connections & fostering a positive work environment are integral to my approach in collaborative projects.</p>
